@@ -1,0 +1,27 @@
+<div class="row" ng-controller="topSellersController">
+    <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Vendedores em destaque</h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <button class="btn btn-primary" ng-click="downloadTopSellersPDF()"> Gerar PDF</button>
+            </div>  
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NOME VENDEDOR</th>
+                    <th class="text-center">TOTAL DE VENDAS FINALIZADAS</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr ng-repeat="x in grid">
+                    <td>{{x.nomeVendedor}}</td>
+                    <td class="text-center">{{x.totalVendas}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

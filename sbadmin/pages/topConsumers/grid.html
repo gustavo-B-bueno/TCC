@@ -1,0 +1,27 @@
+<div class="row" ng-controller="topConsumersController">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Consumidores em destaque</h3>
+            </div>
+            <div class="col-md-6 text-right">
+                <button class="btn btn-primary" ng-click="downloadTopConsumersPDF()"> Gerar PDF</button>
+            </div>  
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NOME CONSUMIDOR</th>
+                    <th class="text-center">TOTAL DE COMPRAS FINALIZADAS</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr ng-repeat="x in grid">
+                    <td>{{x.nomeCliente}}</td>
+                    <td class="text-center">{{x.totalCompras}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

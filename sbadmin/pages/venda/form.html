@@ -1,0 +1,28 @@
+<form action="" method="post">
+    <div ng-if="msg" class="alert" ng-class="alert">{{ msg }}</div>
+    
+    <label>Vendedor</label>
+    <select class="form-control" ng-model="venda.nomeVendedor">
+        <option value="{{x.name}}" ng-repeat="x in users">{{x.name}}</option>
+    </select>
+
+    <br>
+
+    <label>Cliente</label>
+    <select class="form-control" ng-model="venda.nomeCliente">
+        <option value="{{x.name}}" ng-repeat="x in clientes">{{x.name}}</option>
+    </select>
+
+    <br/>
+
+    <label>Produto</label>
+    <select class="form-control" ng-model="venda.nomeProduto" ng-change="updatePrecoProduto()">
+        <option value="{{x.name}}" ng-repeat="x in produtos">{{x.name}}</option>
+    </select> 
+
+    <br/>
+
+    <label>Preço do Produto</label>
+    <input type="text" class="form-control" ng-model="venda.precoProduto" readonly />
+
+</form>

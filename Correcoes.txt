@@ -1,0 +1,8 @@
+Cad - Sub-produtos: Na verdade serão categorias de produtos, para serem filtrados na tela de exibição, e informados no momento do cadastro do produto
+
+Cad - Rel - fornecedores: Tela de cadastro de fornecedores de produtos para serem informados no momento de cadastro do produto, e na tela de exibicao do produto. Irá gerar um relatio
+
+
+------------------------------------------------------------------------------------------------
+
+

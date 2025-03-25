@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Diogo Muneratto">
+
+    <title>SAPHIRUS</title>
+
+    <link href="./src/css/admin.min.css" rel="stylesheet">
+    <link href="./src/css/angular-confirm.min.css" rel="stylesheet">
+    <link href="./src/css/app.css" rel="stylesheet">
+
+    <script src="./src/lib/jquery.min.js"></script>
+    <script src="./src/lib/bootstrap.min.js"></script>
+    <script src="./src/lib/jquery.easing.min.js"></script>
+  
+    <script src="./src/lib/angularjs.min.js"></script>
+    <script src="./src/lib/angular-ui-router.min.js"></script>
+    <script src="./src/lib/ngMask.min.js"></script>
+    <script src="./src/js/angular-confirm.min.js"></script>
+</head>
+
+<body id="page-top" ng-app="myApp">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-text mx-3">SAPHIRUS</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>TELA INICIAL</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                MENU DE FUNÇÕES
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCadastros"
+                    aria-expanded="true" aria-controls="collapseCadastros">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Cadastros</span>
+                </a>
+                <div id="collapseCadastros" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" ui-sref="product" ui-sref-active="active">Produtos</a>
+                        <a class="collapse-item" ui-sref="user" ui-sref-active="active">Vendedores</a>
+                        <a class="collapse-item" ui-sref="consumer" ui-sref-active="active">Consumidores</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMovimentos"
+                    aria-expanded="true" aria-controls="collapseMovimentos">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Movimentos</span>
+                </a>
+                <div id="collapseMovimentos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" ui-sref="venda" ui-sref-active="active">Venda</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRelatorios"
+                    aria-expanded="true" aria-controls="collapseRelatorios">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Relatorios</span>
+                </a>
+                <div id="collapseRelatorios" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" ui-sref="mostSoldProducts" ui-sref-active="active">Produto mais vendido</a>
+                        <a class="collapse-item" ui-sref="topSellers" ui-sref-active="active">Vendedores em destaque</a>
+                        <a class="collapse-item" ui-sref="topConsumers" ui-sref-active="active">Consumidores em destaque</a>
+                        
+                    </div>
+                </div>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="border-bottom: 1px #ccc solid;">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+                    <ui-view></ui-view>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <script src="./src/js/admin.min.js"></script>
+    <script src="./src/js/app.js"></script>
+    <script src="./src/js/userController.js"></script>
+    <script src="./src/js/productController.js"></script>
+    <script src="./src/js/consumerController.js"></script>
+    <script src="./src/js/vendaController.js"></script>
+    <script src="./src/js/mostSoldProductsController.js"></script>
+    <script src="./src/js/topSellersController.js"></script>
+    <script src="./src/js/topConsumersController.js"></script>
+     
+     
+</body>
+
+</html>
