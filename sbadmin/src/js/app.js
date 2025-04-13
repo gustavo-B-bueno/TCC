@@ -3,7 +3,6 @@ let app = angular.module('myApp', ['ui.router', 'cp.ngConfirm', 'ngMask']);
 app.constant('config', {
     name: 'UMFG',
     version: 'v1.0.0',
-    // apiUrl: 'http://api.digitalone.com.br/api/',
     apiUrl: 'http://localhost:3000/api/',
     baseUrl: 'http://localhost/sbadmin/',
     enableDebug: true
@@ -61,5 +60,10 @@ app.config([
                 url: '/topConsumers',
                 templateUrl: './pages/topConsumers/grid.html',
                 controller: 'topConsumersController'
-            })          
+            })
+            .state('category', {
+                url: '/category',
+                templateUrl: './pages/category/grid.html',
+                controller: 'categoryController'
+            })      
 }])

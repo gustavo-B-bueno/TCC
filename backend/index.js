@@ -10,6 +10,7 @@ const userRouter = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const consumerRoutes = require('./routes/consumerRoutes');
 const vendaRoutes = require('./routes/vendaRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
 
 app.use(cors());
 app.use(bodyParser.urlencoded());
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 
 app.use(express.json());
 
-app.use('/api', [userRouter, productRoutes, consumerRoutes, vendaRoutes]);
+app.use('/api', [userRouter, productRoutes, consumerRoutes, vendaRoutes, categoryRoutes]);
 
 sequelize.sync()
 .then(() => console.log('Database criado'))
